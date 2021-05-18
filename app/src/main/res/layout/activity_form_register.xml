@@ -100,7 +100,7 @@
               android:layout_height="9dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName2"
+              android:id="@+id/txtNombreRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
@@ -118,7 +118,7 @@
               android:layout_height="14dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName7"
+              android:id="@+id/txtApellidoRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
@@ -136,13 +136,13 @@
               android:layout_height="14dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName9"
+              android:id="@+id/txtEmailRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Correo Electrónico"
-              android:inputType="textPersonName"
+              android:inputType="textEmailAddress"
               android:paddingLeft="20sp"
               android:textColor="#6E7692"
               android:textColorHint="#6E7692"
@@ -154,7 +154,7 @@
               android:layout_height="14dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName8"
+              android:id="@+id/txtTelefonoRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
@@ -172,7 +172,7 @@
               android:layout_height="14dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName10"
+              android:id="@+id/txtDireccionRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
@@ -190,12 +190,12 @@
               android:layout_height="14dp" />
 
           <EditText
-              android:id="@+id/editTextTextPersonName"
+              android:id="@+id/txtPasswordRegistro"
               android:layout_width="match_parent"
               android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
-              android:hint="Constraseña"
+              android:hint="Contraseña"
               android:inputType="textPassword"
               android:paddingLeft="20sp"
               android:textColor="#6E7692"
@@ -223,7 +223,25 @@
           <TextView
               android:id="@+id/textView17"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
+
+          <EditText
+              android:id="@+id/txtPasswordConfirmada"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="@drawable/texto_form"
+              android:ems="10"
+              android:hint="Confirmar Contraseña"
+              android:inputType="textPassword"
+              android:paddingLeft="20sp"
+              android:textColor="#6E7692"
+              android:textColorHint="#6E7692"
+              android:textSize="22sp" />
+
+          <TextView
+              android:id="@+id/textView16"
+              android:layout_width="match_parent"
+              android:layout_height="14dp" />
 
           <LinearLayout
               android:layout_width="match_parent"
@@ -236,6 +254,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:backgroundTint="#009C27B0"
+                android:onClick="registrarUsuario"
                 android:paddingStart="0sp"
                 android:paddingLeft="0sp"
                 android:paddingTop="0sp"
