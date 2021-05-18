@@ -9,7 +9,7 @@ import android.widget.Toast;
 /*
 @autores:Sandoval,Sanchez,Rovayo
 @creación/ 16/05/2021
-@fModificación 17/05/2021
+@fModificación 18/05/2021
 @descripción: registrar usuario.
 */
 
@@ -23,7 +23,7 @@ public class formRegister extends AppCompatActivity {
             txtDireccionRegistro,
             txtPasswordRegistro,
             txtPasswordConfirmada; //definiendo objetos para capturar datos desde la vista
-
+            BaseDeDatos miBdd;
     //PROCESO 1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class formRegister extends AppCompatActivity {
         txtDireccionRegistro=(EditText)findViewById(R.id.txtDireccionRegistro);
         txtPasswordRegistro=(EditText)findViewById(R.id.txtPasswordRegistro);
         txtPasswordConfirmada=(EditText)findViewById(R.id.txtPasswordConfirmada);
+        miBdd=new BaseDeDatos(getApplicationContext());// instaciar construir la base de datos en el objeto miBdd
     }
 
     //PROCESO 2
@@ -65,6 +66,7 @@ public class formRegister extends AppCompatActivity {
                 //finish(); //si los campos estan completos y password es valido guarda registro
 
                 if (password.equals(passwordConfirmada)) {
+                    miBdd.agregarUsuario(nombre,apellido,email,telefono, direccion,password);
                     Toast.makeText(getApplicationContext(), "Usuario registrado correctamente",
                             Toast.LENGTH_LONG).show(); //mostrando mensaje de usuario registrado
                     finish();
