@@ -21,8 +21,8 @@ public class formRegister extends AppCompatActivity {
             txtEmailRegistro,
             txtTelefonoRegistro,
             txtDireccionRegistro,
-            txtPasswordRegistro;
-            //txtPasswordConfirmada; //definiendo objetos para capturar datos desde la vista
+            txtPasswordRegistro,
+            txtPasswordConfirmada; //definiendo objetos para capturar datos desde la vista
 
     //PROCESO 1
     @Override
@@ -37,7 +37,7 @@ public class formRegister extends AppCompatActivity {
         txtTelefonoRegistro=(EditText)findViewById(R.id.txtTelefonoRegistro);
         txtDireccionRegistro=(EditText)findViewById(R.id.txtDireccionRegistro);
         txtPasswordRegistro=(EditText)findViewById(R.id.txtPasswordRegistro);
-        //txtPasswordConfirmada=(EditText)findViewById(R.id.txtPasswordConfirmada);
+        txtPasswordConfirmada=(EditText)findViewById(R.id.txtPasswordConfirmada);
     }
 
     //PROCESO 2
@@ -49,7 +49,7 @@ public class formRegister extends AppCompatActivity {
         String telefono=txtTelefonoRegistro.getText().toString();
         String direccion=txtDireccionRegistro.getText().toString();
         String password=txtPasswordRegistro.getText().toString();
-        //String passwordConfirmada=txtPasswordConfirmada.getText().toString();
+        String passwordConfirmada=txtPasswordConfirmada.getText().toString();
 
 
         if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() ||telefono.isEmpty()
@@ -62,7 +62,16 @@ public class formRegister extends AppCompatActivity {
                         Toast.LENGTH_LONG).show(); //mostrando mensaje de contraseña invalida
             }
             else {
-                finish(); //si los campos estan completos y password es valido guarda registro
+                //finish(); //si los campos estan completos y password es valido guarda registro
+
+                if (password.equals(passwordConfirmada)) {
+                    Toast.makeText(getApplicationContext(), "Usuario registrado correctamente",
+                            Toast.LENGTH_LONG).show(); //mostrando mensaje de usuario registrado
+                    finish();
+                } else{
+                    Toast.makeText(getApplicationContext(), "Las contraseñas ingresadas no coinciden",
+                            Toast.LENGTH_LONG).show(); //mostrando un mensaje de error/alerta
+                }
 
             }
         }

@@ -102,7 +102,7 @@
           <EditText
               android:id="@+id/txtNombreRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Nombre"
@@ -115,12 +115,12 @@
           <TextView
               android:id="@+id/textView11"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
 
           <EditText
               android:id="@+id/txtApellidoRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Apellido"
@@ -133,12 +133,12 @@
           <TextView
               android:id="@+id/textView13"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
 
           <EditText
               android:id="@+id/txtEmailRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Correo Electrónico"
@@ -151,12 +151,12 @@
           <TextView
               android:id="@+id/textView12"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
 
           <EditText
               android:id="@+id/txtTelefonoRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Teléfono"
@@ -169,12 +169,12 @@
           <TextView
               android:id="@+id/textView14"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
 
           <EditText
               android:id="@+id/txtDireccionRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Dirección"
@@ -187,12 +187,12 @@
           <TextView
               android:id="@+id/textView15"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
 
           <EditText
               android:id="@+id/txtPasswordRegistro"
               android:layout_width="match_parent"
-              android:layout_height="46dp"
+              android:layout_height="40dp"
               android:background="@drawable/texto_form"
               android:ems="10"
               android:hint="Contraseña"
@@ -205,7 +205,25 @@
           <TextView
               android:id="@+id/textView17"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="14dp" />
+
+          <EditText
+              android:id="@+id/txtPasswordConfirmada"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="@drawable/texto_form"
+              android:ems="10"
+              android:hint="Confirmar Contraseña"
+              android:inputType="textPassword"
+              android:paddingLeft="20sp"
+              android:textColor="#6E7692"
+              android:textColorHint="#6E7692"
+              android:textSize="22sp" />
+
+          <TextView
+              android:id="@+id/textView16"
+              android:layout_width="match_parent"
+              android:layout_height="14dp" />
 
           <LinearLayout
               android:layout_width="match_parent"
