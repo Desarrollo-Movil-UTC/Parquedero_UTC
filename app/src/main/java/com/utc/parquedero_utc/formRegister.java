@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /*
 @autores:Sandoval,Sanchez,Rovayo
 @creación/ 16/05/2021
@@ -51,6 +55,8 @@ public class formRegister extends AppCompatActivity {
         String direccion=txtDireccionRegistro.getText().toString();
         String password=txtPasswordRegistro.getText().toString();
         String passwordConfirmada=txtPasswordConfirmada.getText().toString();
+        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
+        String fecha_registro = df.format(Calendar.getInstance().getTime());
 
 
         if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() ||telefono.isEmpty()
@@ -66,7 +72,7 @@ public class formRegister extends AppCompatActivity {
                 //finish(); //si los campos estan completos y password es valido guarda registro
 
                 if (password.equals(passwordConfirmada)) {
-                    miBdd.agregarUsuario(nombre,apellido,email,telefono, direccion,password);
+                    miBdd.agregarUsuario(nombre,apellido,email,telefono, direccion,password,fecha_registro);
                     Toast.makeText(getApplicationContext(), "Usuario registrado correctamente",
                             Toast.LENGTH_LONG).show(); //mostrando mensaje de usuario registrado
                     finish();
