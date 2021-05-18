@@ -203,6 +203,24 @@
               android:textSize="22sp" />
 
           <TextView
+              android:id="@+id/textView16"
+              android:layout_width="match_parent"
+              android:layout_height="14dp" />
+
+          <EditText
+              android:id="@+id/editTextTextPersonName3"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="@drawable/texto_form"
+              android:ems="10"
+              android:hint="Confirmar Contraseña"
+              android:inputType="textPassword"
+              android:paddingLeft="20sp"
+              android:textColor="#6E7692"
+              android:textColorHint="#6E7692"
+              android:textSize="22sp" />
+
+          <TextView
               android:id="@+id/textView17"
               android:layout_width="match_parent"
               android:layout_height="14dp" />
